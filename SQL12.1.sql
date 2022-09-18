@@ -90,4 +90,4 @@ group by CustomerID;
 -- result here should be 2 rows for dates June 1 and June 2 which are for Customer 1. If you
 -- have Customer 2 with orders on June 1, 2022 as well, it should appear as another row in your result.
 select CustomerID,COUNT(transactionID),`Date`,sum(Total) as total FROM transactions 
-group by TransactionID;
+group by CustomerID, `Date`; 
